@@ -28,7 +28,6 @@ const oppoStatus = [
 
 const FormComponent = class {
   // Even though it is not a requirement, I am using constructor to make the FormComponent more flexible.
-
   // Creating a new FormComponent will ADD options to the specific form. It will not create a new form. That means, that if you call the `.start()` method multiple times and some of the status arrays contain duplicate entries, these entries will be displayed as duplicates to the form.
   constructor(
     // Setting an default status object
