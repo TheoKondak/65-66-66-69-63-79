@@ -67,10 +67,7 @@ const FormComponent = class {
     const inputElement = document.querySelector('input[name="success"]');
 
     // Find the status in `status`.
-    const selectedStatus = this.statusOptions.find(function (status) {
-      // using `function` instead of arrow function just because it's a tiny bit faster.
-      return status.K_OPPO_STATUS === parseInt(e.target.value);
-    });
+    const selectedStatus = this.statusOptions.find((status) => status.K_OPPO_STATUS === parseInt(e.target.value));
 
     // Update input element value
     inputElement.value = selectedStatus.SUCCESS;
