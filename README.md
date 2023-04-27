@@ -24,6 +24,12 @@ The immutable HTML of the page:
 </body>
 ```
 
+Without any CSS layout, it looks like this when opened in a Browser
+
+![blank-form](https://user-images.githubusercontent.com/25774466/234848047-9e89a452-9b75-44c1-8997-46b2d428d38b.png)
+
+
+
 Your JavaScript starting skeleton, including the Opportunity status data:
 
 ```js
@@ -86,6 +92,8 @@ fc.start();
 - Set a mono-space font on the output `<div>` so we have a better view on the generated JSON output.
 - How it should look (more or less) with styles applied and when the form is submitted:
 
+![output](https://user-images.githubusercontent.com/25774466/234848143-e4456993-4c6a-4853-aadd-1f32a3b9d51d.png)
+
 ### 1.3 The rules of the game
 
 - This is a personal test, don't share this page with friends or online
@@ -93,7 +101,6 @@ fc.start();
 - Use CSS, SCSS or Sass for styling, no JS
 - Use only pure JS, external frameworks or libraries (e.g. jQuery) are not allowed.
 - You don't have to support retired browsers, ECMA 2019 is allowed!
-
 
 ### 1.4 What we appreciate
 
@@ -112,4 +119,3 @@ Regards,
 The Efficy Technical Architects team!
 
 Source: https://help.efficy.io/edn/projectguides/newEmployeeTest_efd7f872
-
