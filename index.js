@@ -66,9 +66,10 @@ const FormComponent = class {
   #handleSelectChange = (e) => {
     const inputElement = document.querySelector('input[name="success"]');
 
-    // Find the status in `status`.
-    const selectedStatus = this.statusOptions.find((status) => status.K_OPPO_STATUS === parseInt(e.target.value));
+    const regex = /^\d+$/;
 
+    // Find the status in `status`.
+    const selectedStatus = regex.test(e.target.value) ? this.statusOptions.find((status) => status.K_OPPO_STATUS === parseInt(e.target.value, 10)) : console.error(`K_OPPO_STATUS must be a number, and not a character, or special character. Instead received: ${e.target.value}`);
     // Update input element value
     inputElement.value = selectedStatus.SUCCESS;
   };
@@ -85,7 +86,7 @@ const FormComponent = class {
 
   start() {
     // Select the elements
-    const formElement = document.querySelector('forma');
+    const formElement = document.querySelector('form');
     const selectElement = document.querySelector('select[name="status"]');
 
     if (!formElement || !selectElement) {
