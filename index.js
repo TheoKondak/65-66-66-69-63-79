@@ -63,7 +63,7 @@ const FormComponent = class {
     this.statusOptions = status;
   }
 
-  handleSelectChange = (e) => {
+  #handleSelectChange = (e) => {
     const inputElement = document.querySelector('input[name="success"]');
 
     // Find the status in `status`.
@@ -76,7 +76,7 @@ const FormComponent = class {
     inputElement.value = selectedStatus.SUCCESS;
   };
 
-  handleSubmitForm = (e) => {
+  #handleSubmitForm = (e) => {
     // Prevent the default behavior of the form, which reloads the page.
     e.preventDefault();
 
@@ -91,21 +91,31 @@ const FormComponent = class {
     const formElement = document.querySelector('form');
     const selectElement = document.querySelector('select[name="status"]');
 
-    // Assign the options from `statusOptions`
-    this.statusOptions.forEach((status) => {
-      // For each option create a new option HTML tag
-      const optionElement = document.createElement('option');
+    // Making sure that elements are present
+    if (formElement && selectElement) {
+      // Assign the options from `statusOptions`
+      this.statusOptions.forEach((status) => {
+        // For each option create a new option HTML tag
+        const optionElement = document.createElement('option');
 
-      optionElement.value = status.K_OPPO_STATUS; // Set option element value
-      optionElement.textContent = status.STATUS; // Set option element content
-      selectElement.appendChild(optionElement); // Append select option element to the dom
-    });
+        optionElement.value = status.K_OPPO_STATUS; // Set option element value
+        optionElement.textContent = status.STATUS; // Set option element content
+        selectElement.appendChild(optionElement); // Append select option element to the dom
+      });
 
-    // Add event listener to update status field on change
-    selectElement.addEventListener('change', (e) => this.handleSelectChange(e));
+      // Add event listener to update status field on change
+      selectElement.addEventListener('change', (e) => this.#handleSelectChange(e));
 
-    // Handle form submission
-    formElement.addEventListener('submit', (e) => this.handleSubmitForm(e));
+      // Handle form submission
+      formElement.addEventListener('submit', (e) => this.#handleSubmitForm(e));
+    } else {
+      console.error(`Either formElement, or selectElement not found`);
+
+      const p = document.createElement('p');
+      const errorNode = document.createTextNode(`Some error occurred. Either formElement, or selectElement not found`);
+      p.appendChild(errorNode);
+      document.body.appendChild(p);
+    }
   }
 };
 
