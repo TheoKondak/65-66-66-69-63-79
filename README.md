@@ -90,7 +90,8 @@ fc.start();
 - Right align the success value
 - Display the Submit button in it's own box. Add some spacing around the element.
 - Set a mono-space font on the output `<div>` so we have a better view on the generated JSON output.
-- How it should look (more or less) with styles applied and when the form is submitted:
+
+How it should look (more or less) with styles applied and when the form is submitted:
 
 ![output](https://user-images.githubusercontent.com/25774466/234848143-e4456993-4c6a-4853-aadd-1f32a3b9d51d.png)
 
