@@ -1,4 +1,20 @@
-# efficyTechAssignment
+- [Efficy Technical Assignment](#efficy-technical-assignment)
+  - [Specifications](#specifications)
+    - [1 Introduction](#1-introduction)
+    - [1.1 The Opportunity form](#11-the-opportunity-form)
+    - [1.2 Functional requirements](#12-functional-requirements)
+      - [Page dynamics](#page-dynamics)
+      - [Basic styling](#basic-styling)
+    - [1.3 The rules of the game](#13-the-rules-of-the-game)
+    - [1.4 What we appreciate](#14-what-we-appreciate)
+    - [2 Submit your code](#2-submit-your-code)
+  - [Feedback](#feedback)
+  - [About my approach](#about-my-approach)
+  - [Access the code](#access-the-code)
+  - [Run the project locally](#run-the-project-locally)
+
+
+# Efficy Technical Assignment
 
 ## Specifications
 
@@ -120,3 +136,45 @@ Regards,
 The Efficy Technical Architects team!
 
 Source: https://help.efficy.io/edn/projectguides/newEmployeeTest_efd7f872
+
+## Feedback
+
+> Mention your feedback
+
+Before I receive the test, I was expecting it to be on the realm of Vue or NodeJs, but I was pleasantly surprised that it was just some plain JS.
+Overall I found the test to be relatively easy. At the same time, the test can show the knowledge of JS of the candidate, depending on how the candidate approached the problem, if he took under consideration, the error handling and the scalability of the app, etc.
+> How long the test took you
+
+I managed to solve the main requests within a short amount of time. I believe under one hour. After that, and since I had ample time, I worked towards improving my code, as well as working on the style-related requirements. 
+
+## About my approach
+
+I tried to solve the test, taking into consideration some error handling, and since this is a class, some scalability.
+For scalability, `FormComponent` takes an optional `status` object, that defaults to the given `oppoStatus` object. If a new `FormComponent` is created, then the new `status` will merge with any existing status. That is a little bit out of the specifications, but I implemented it in order to utilize the fact that I was asked to use a class.
+
+Also, took the liberty to add some extra styling, respecting the original design request for displaying the form.
+
+
+## Access the code
+
+The code is available:
+- Github: https://github.com/TheoKondak/65-66-66-69-63-79
+- JSFiddle: https://jsfiddle.net/6hud8kfc/11/
+
+## Run the project locally
+
+To run the project locally:
+
+- Install the required packages by using
+  | Command |
+  |---|
+  | npm install |
+  | yarn install |
+  | pnpm install |
+- Run the `http-server` by running
+  | Command |
+  |---|
+  | npm run start |
+  | yarn start |
+  | pnpm start |
+- Open your `localhost:8080`
